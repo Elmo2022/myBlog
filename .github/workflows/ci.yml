@@ -16,8 +16,8 @@ jobs:
           persist-credentials: false
  
       # 安装 pnpm
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - name: Install npm
+        uses: npm/action-setup@v2
         with:
           version: 8
  
@@ -27,11 +27,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-          cache: 'pnpm'
+          cache: 'npm'
  
       # 打包成静态文件
       - name: Build
-        run: pnpm install && pnpm build
+        run: npm install && npm build
  
       # 部署到GitHub Pages - 也就是将打包内容发布到GitHub Pages
       - name: Deploy

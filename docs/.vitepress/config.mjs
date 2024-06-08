@@ -3,6 +3,7 @@ import topNav from "./topNav";
 import { vitePressNote } from "./sideBar/vitePressBar";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base:"./",
   title: "张天博的博客",
   description: "A VitePress Site",
   themeConfig: {
