@@ -15,6 +15,7 @@ export default [
       { text: "React", link: "/note/react" },
       { text: "TypeScript", link: "/note/typeScript"},
       { text: "JavaScript", link: "/note/javaScript" },
+      { text: "Next.js", link: "/note/nextjs" },
     ],
   },
   {
