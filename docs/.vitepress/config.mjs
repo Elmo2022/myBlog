@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress'
 import topNav from "./topNav";
-import { vitePressNote } from "./sideBar/vitePressBar";
+import { net } from "./sideBar/net";
+import { os } from "./sideBar/os";
+import { algorithm } from "./sideBar/algorithm";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base:"/myBlog/",
@@ -10,7 +12,10 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: topNav,
     sidebar: {
-      "/note/vitePress": vitePressNote,
+      "/baseLesson/net": net,
+      "/baseLesson/os": os,
+      "/baseLesson/algorithm": algorithm
+
     },
     logo: "/草莓熊.jpeg",
   
