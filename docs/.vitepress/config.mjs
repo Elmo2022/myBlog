@@ -7,7 +7,7 @@ import { algorithm } from "./sideBar/algorithm";
 export default defineConfig({
   base:"/myBlog/",
   title: "张天博的博客",
-  description: "A VitePress Site",
+  description: "A VitePress Site to show myBlog.",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: topNav,
