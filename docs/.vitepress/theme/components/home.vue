@@ -1,7 +1,7 @@
 
 <template>
   <div class="ui-home">
-    <div class="ui-title">前端开源项目推荐</div>
+    <div class="ui-title">精彩文章推荐</div>
     <ul class="ui-project">
       <li class="item" v-for="v in siteData" :key="v.name">
         <a class="link" :href="v.link" target="_blank">
