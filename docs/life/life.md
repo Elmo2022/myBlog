@@ -5,6 +5,6 @@
 
 
 
-传一张中考毕业的照片留作纪念
+分享一张生活照，猜一猜哪个是我😀
 
-![d8d681387254452a90140448e7bd192c](https://raw.githubusercontent.com/Elmo2022/pictureBed/master/img/202406091446289.png)
+![6fe059bff8a21025143fb331366fe87b](https://raw.githubusercontent.com/Elmo2022/pictureBed/master/img/202407192217219.jpg)
