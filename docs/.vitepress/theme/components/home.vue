@@ -24,7 +24,7 @@ import { siteData } from '../model/siteData.js'
 .color-blue-light6 {background: #2db7f5;}
 .color-green-gradient1{
 	background: -webkit-linear-gradient(120deg, #86b91a 30%, #edd532);
-	background: linear-gradient(120deg, #86b91a 30%, #edd532);
+	background: linear-gradient(315deg, #86b91a 30%, #edd532);
 }
 .color-green-gradient2{
 	background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
@@ -43,7 +43,7 @@ import { siteData } from '../model/siteData.js'
 /**首页网址推荐**/
 .ui-home {
   width: 1152px;
-  margin: 0 auto 20px;
+  margin: 0 auto 0px;
   .ui-title {
     display: flex;
     align-items: center;
@@ -54,16 +54,17 @@ import { siteData } from '../model/siteData.js'
 }
 .ui-project {
 	display: grid;
-	gap: 20px;
-	grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+	//gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 0fr));
 	justify-content: space-between;
-	margin-top: 20px;
+//	margin-top: 20px;
   .item,
   .link {
     height: 220px;
   }
   .item {
     .link {
+      margin-top: 10px;
       display: block;
       color: #333;
       background: #fff;
@@ -72,7 +73,7 @@ import { siteData } from '../model/siteData.js'
       transition: all .4s;
     }
     .link:hover {
-      -webkit-filter: brightness(1.2);
+      //-webkit-filter: brightness(1.2);
       box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
       transform: rotateY(-0.1deg) scale(1.03) translateZ(0);
     }
