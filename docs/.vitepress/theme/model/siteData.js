@@ -24,9 +24,9 @@ export const siteData = [
     className: "color-blue-deep4",
   },
   {
-    name: "TypeScript",
-    desc: "现在是大数据爆发的时代。",
-    link: "/myBlog/lesson/bigData",
+    name: "事件总线通信",
+    desc: "event bus实现兄弟组件通信。",
+    link: "/myBlog/note/eventBus",
     className: "color-blue-deep4",
   },
   // {
