@@ -1,7 +1,7 @@
 export const siteData = [
   {
     name: "人工智能学习",
-    desc: "人工智能已经是计算机领域的大趋势了！",
+    desc: "人工智能已经是计算机领域的大趋势了！人工智能已经是计算机领域的大趋势了！人工智能已经是计算机领域的大趋势了！",
     link: "/myBlog/lesson/ai",
     className: "color-pink1",
   },
@@ -29,6 +29,37 @@ export const siteData = [
     link: "/myBlog/note/eventBus",
     className: "color-blue-deep4",
   },
+  {
+    name: "事件总线通信",
+    desc: "event bus实现兄弟组件通信。",
+    link: "/myBlog/note/eventBus",
+    className: "color-blue-deep4",
+  },
+  {
+    name: "事件总线通信",
+    desc: "event bus实现兄弟组件通信。",
+    link: "/myBlog/note/eventBus",
+    className: "color-blue-deep4",
+  },
+  {
+    name: "事件总线通信",
+    desc: "event bus实现兄弟组件通信。",
+    link: "/myBlog/note/eventBus",
+    className: "color-blue-deep4",
+  },
+  {
+    name: "事件总线通信",
+    desc: "event bus实现兄弟组件通信。",
+    link: "/myBlog/note/eventBus",
+    className: "color-blue-deep4",
+  },
+  {
+    name: "事件总线通信",
+    desc: "event bus实现兄弟组件通信。",
+    link: "/myBlog/note/eventBus",
+    className: "color-blue-deep4",
+  },
+
   // {
   //   name: "Vite",
   //   desc: "下一代前端开发与构建工具",

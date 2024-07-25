@@ -1,4 +1,3 @@
-
 <template>
   <div class="ui-home">
     <div class="ui-title">精彩文章推荐</div>
@@ -13,37 +12,37 @@
   </div>
   <BackTop></BackTop>
 </template>
+
 <script setup>
 import { siteData } from '../model/siteData.js'
-
 </script>
-<style lang="scss">
+
+<style lang="scss" scoped>
 .color-pink1 {background: #90f;}
 .color-red {background: #b91d47;}
 .color-blue-deep4 {background: #3360a3;}
 .color-blue-light6 {background: #2db7f5;}
-.color-green-gradient1{
-	background: -webkit-linear-gradient(120deg, #86b91a 30%, #edd532);
-	background: linear-gradient(315deg, #86b91a 30%, #edd532);
+.color-green-gradient1 {
+  background: -webkit-linear-gradient(120deg, #86b91a 30%, #edd532);
+  background: linear-gradient(315deg, #86b91a 30%, #edd532);
 }
-.color-green-gradient2{
-	background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
-	background: linear-gradient(315deg, #42d392 25%, #647eff);
+.color-green-gradient2 {
+  background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+  background: linear-gradient(315deg, #42d392 25%, #647eff);
 }
-.color-green-gradient3{
-	background: -webkit-linear-gradient(315deg, #51a256 25%, #f7d336);
-	background: linear-gradient(315deg, #51a256 25%, #f7d336);
+.color-green-gradient3 {
+  background: -webkit-linear-gradient(315deg, #51a256 25%, #f7d336);
+  background: linear-gradient(315deg, #51a256 25%, #f7d336);
 }
 .color-pink-gradient {
-	background: -webkit-linear-gradient(120deg, #bd44fe 35%, #42d1ff);
-	background: linear-gradient(120deg, #bd44fe 35%, #42d1ff);
+  background: -webkit-linear-gradient(120deg, #bd44fe 35%, #42d1ff);
+  background: linear-gradient(120deg, #bd44fe 35%, #42d1ff);
 }
-
 
 /**首页网址推荐**/
 .ui-home {
   width: 1152px;
-  margin: 0 auto 0px;
+  margin: 0 auto;
   .ui-title {
     display: flex;
     align-items: center;
@@ -53,11 +52,12 @@ import { siteData } from '../model/siteData.js'
   }
 }
 .ui-project {
-	display: grid;
-	//gap: 20px;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 0fr));
-	justify-content: space-between;
-//	margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  list-style-type: none;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 0; /* Add padding reset */
+  margin: 0;  /* Add margin reset */
   .item,
   .link {
     height: 220px;
@@ -73,7 +73,6 @@ import { siteData } from '../model/siteData.js'
       transition: all .4s;
     }
     .link:hover {
-      //-webkit-filter: brightness(1.2);
       box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
       transform: rotateY(-0.1deg) scale(1.03) translateZ(0);
     }
