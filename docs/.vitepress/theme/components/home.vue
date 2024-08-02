@@ -34,9 +34,9 @@ import { siteData } from '../model/siteData.js'
   background: -webkit-linear-gradient(315deg, #51a256 25%, #f7d336);
   background: linear-gradient(315deg, #51a256 25%, #f7d336);
 }
-.color-pink-gradient {
+.color-pink-gradient4 {
   background: -webkit-linear-gradient(120deg, #bd44fe 35%, #42d1ff);
-  background: linear-gradient(120deg, #bd44fe 35%, #42d1ff);
+  background: linear-gradient(315deg, #bd44fe 35%, #42d1ff);
 }
 
 /**首页网址推荐**/
