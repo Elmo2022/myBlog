@@ -36,9 +36,9 @@ export const siteData = [
     className: "color-blue-deep4",
   },
   {
-    name: "事件总线通信",
-    desc: "event bus实现兄弟组件通信。",
-    link: "/myBlog/note/eventBus",
+    name: "ES6",
+    desc: "ES6语法",
+    link: "/myBlog/note/es6",
     className: "color-blue-deep4",
   },
   {
