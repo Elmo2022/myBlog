@@ -54,9 +54,9 @@ export const siteData = [
     className: "color-gradient9",
   },
   {
-    name: "事件总线通信",
-    desc: "event bus实现兄弟组件通信。",
-    link: "/myBlog/note/eventBus",
+    name: "Vue3封装多个页面使用的表单组件",
+    desc: "Vue3封装多个页面使用的表单组件。",
+    link: "/myBlog/note/formComponent",
     className: "color-gradient10",
   },
 
