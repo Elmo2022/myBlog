@@ -1,14 +1,14 @@
 <template>
   <div class="ui-home">
     <div class="ui-title">精彩文章推荐</div>
-    <ul class="ui-project">
-      <li class="item" v-for="v in siteData" :key="v.name">
+    <div class="ui-project">
+      <div class="item" v-for="v in siteData" :key="v.name">
         <a class="link" :href="v.link" target="_blank">
           <h3 :class="['title', v.className]">{{ v.name }}</h3>
           <p class="desc">{{ v.desc }}</p>
         </a>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
   <BackTop></BackTop>
 </template>
@@ -38,7 +38,36 @@ import { siteData } from '../model/siteData.js'
   background: -webkit-linear-gradient(120deg, #bd44fe 35%, #42d1ff);
   background: linear-gradient(315deg, #bd44fe 35%, #42d1ff);
 }
+.color-gradient5 {
+  background: -webkit-linear-gradient(135deg, #ff4d4d 30%, #ff9a52);
+  background: linear-gradient(315deg, #ff4d4d 30%, #ff9a52);
+}
 
+.color-gradient6 {
+  background: -webkit-linear-gradient(315deg, #7b4397 25%, #dc2430);
+  background: linear-gradient(135deg, #7b4397 25%, #dc2430);
+}
+
+.color-gradient7 {
+  background: -webkit-linear-gradient(315deg, #0984e3 20%, #36a2eb);
+  background: linear-gradient(135deg, #0984e3 20%, #36a2eb);
+}
+
+.color-gradient8 {
+  background: -webkit-linear-gradient(135deg, #f4a261 35%, #f9c74f);
+  background: linear-gradient(315deg, #f4a261 35%, #f9c74f);
+}
+
+
+.color-gradient9 {
+  background: -webkit-linear-gradient(120deg, #48c9b0 40%, #6f86d6);
+  background: linear-gradient(300deg, #48c9b0 40%, #6f86d6);
+}
+
+.color-gradient10 {
+  background: -webkit-linear-gradient(315deg, rgba(175, 244, 27, 0.856) 30%, #50c878);
+  background: linear-gradient(135deg, #96deda 30%, #50c878);
+}
 /**首页网址推荐**/
 .ui-home {
   width: 1152px;
@@ -64,7 +93,7 @@ import { siteData } from '../model/siteData.js'
   }
   .item {
     .link {
-      margin-top: 10px;
+      margin-top: 0;
       display: block;
       color: #333;
       background: #fff;

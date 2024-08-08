@@ -27,37 +27,37 @@ export const siteData = [
     name: "事件总线通信",
     desc: "event bus实现兄弟组件通信。",
     link: "/myBlog/note/eventBus",
-    className: "color-blue-deep4",
+    className: "color-gradient5",
   },
   {
     name: "浏览器内核",
     desc: "浏览器渲染原理",
     link: "/myBlog/note/browserKernel",
-    className: "color-blue-deep4",
+    className: "color-gradient6",
   },
   {
     name: "ES6",
     desc: "ES6语法",
     link: "/myBlog/note/es6",
-    className: "color-blue-deep4",
+    className: "color-gradient7",
   },
   {
     name: "事件总线通信",
     desc: "event bus实现兄弟组件通信。",
     link: "/myBlog/note/eventBus",
-    className: "color-blue-deep4",
+    className: "color-gradient8",
   },
   {
     name: "事件总线通信",
     desc: "event bus实现兄弟组件通信。",
     link: "/myBlog/note/eventBus",
-    className: "color-blue-deep4",
+    className: "color-gradient9",
   },
   {
     name: "事件总线通信",
     desc: "event bus实现兄弟组件通信。",
     link: "/myBlog/note/eventBus",
-    className: "color-blue-deep4",
+    className: "color-gradient10",
   },
 
   // {
