@@ -10,13 +10,13 @@ export default [
     ],
   },
   {
-    text: "技术笔记",
+    text: "学习笔记",
     items: [
       { text: "Vue", link: "/note/vue" },
-      { text: "React", link: "/note/react" },
-      { text: "TypeScript", link: "/note/typeScript"},
       { text: "JavaScript", link: "/note/javaScript" },
-      { text: "Next.js", link: "/note/nextjs" },
+      { text: "浏览器", link: "/note/browser" },
+      { text: "手写代码", link: "/note/codeHandle"},
+      { text: "前端工程化", link: "/note/engineering" }  
     ],
   },
   {
