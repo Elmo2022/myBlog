@@ -4,7 +4,7 @@ layout: home
 
 hero:
   image: 
-    src: /草莓熊.jpeg
+    src: /elmo.png
     alt: 前端吧
   # name: "张天博的博客"
   name: "欢迎来到我的博客，这里记录了我的学习、生活、思考和分享。"
