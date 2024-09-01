@@ -50,7 +50,7 @@ export const siteData = [
   {
     name: "linux常用命令",
     desc: "Linux命令行工具强大而灵活，是高效管理文件系统和执行系统操作的基础。",
-    link: "/myBlog/note/linux",
+    link: "/myBlog/note/objectFreeze",
     className: "color-gradient9",
   },
   {
