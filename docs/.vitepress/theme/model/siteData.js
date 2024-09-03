@@ -30,9 +30,9 @@ export const siteData = [
     className: "color-gradient5",
   },
   {
-    name: "浏览器内核",
-    desc: "浏览器内核是解析和渲染网页的核心引擎，决定了网页显示效果和性能。",
-    link: "/myBlog/note/browserKernel",
+    name: "机器学习",
+    desc: "机器学习算法通过从数据中学习模式和关系，使计算机能够预测结果或执行任务，如识别图像中的对象、翻译语言或推荐产品。",
+    link: "/myBlog/note/machineLearn",
     className: "color-gradient6",
   },
   {
@@ -48,9 +48,9 @@ export const siteData = [
     className: "color-gradient8",
   },
   {
-    name: "linux常用命令",
-    desc: "Linux命令行工具强大而灵活，是高效管理文件系统和执行系统操作的基础。",
-    link: "/myBlog/note/objectFreeze",
+    name: "CSS常见布局",
+    desc: "CSS如何实现品字布局、圣杯布局和双飞翼布局？如何实现BFC？flex布局和grid布局？",
+    link: "/myBlog/note/cssDisplay",
     className: "color-gradient9",
   },
   {
@@ -60,28 +60,4 @@ export const siteData = [
     className: "color-gradient10",
   },
 
-  // {
-  //   name: "Vite",
-  //   desc: "下一代前端开发与构建工具",
-  //   link: "https://cn.vitejs.dev/",
-  //   className: "color-pink-gradient",
-  // },
-  // {
-  //   name: "Vitest",
-  //   desc: "由 Vite 提供支持的极速单元测试框架",
-  //   link: "https://cn.vitest.dev/",
-  //   className: "color-green-gradient1",
-  // },
-  // {
-  //   name: "Pinia",
-  //   desc: "符合直觉的 Vue.js 状态管理库",
-  //   link: "https://pinia.vuejs.org/zh/",
-  //   className: "color-green-gradient3",
-  // },
-  // {
-  //   name: "Ant Design",
-  //   desc: "一个 UI 设计语言，蚂蚁金服体验技术部出品",
-  //   link: "https://ant-design.antgroup.com/index-cn",
-  //   className: "color-blue-light6",
-  // },
 ];
