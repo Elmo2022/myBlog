@@ -30,9 +30,9 @@ export const siteData = [
     className: "color-gradient5",
   },
   {
-    name: "机器学习",
-    desc: "机器学习算法通过从数据中学习模式和关系，使计算机能够预测结果或执行任务，如识别图像中的对象、翻译语言或推荐产品。",
-    link: "/myBlog/note/machineLearn",
+    name: "TCP、UDP通信",
+    desc: "socket编程中，TCP和UDP是两种常见的传输层协议，各有优缺点，适用于不同场景。",
+    link: "/myBlog/note/tcpudp",
     className: "color-gradient6",
   },
   {
