@@ -10,7 +10,7 @@
 
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/2adc72d4b09b056625903cd682b3cca6.png)
 证明：**为什么决策平面与权重向量w正交**
-参考链接:[csdn](https://blog.csdn.net/qq_33567644/article/details/91463709?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522171387239416800184119014%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=171387239416800184119014&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-91463709-null-null.nonecase&utm_term=%E6%AD%A3%E4%BA%A4&spm=1018.2226.3001.4450)
+
 ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/969c4af66424538000f45b25ffe7dbc1.png)
 **问题：什么才是一个好的权重？**
 ![在这里插入图片描述](https://raw.githubusercontent.com/Elmo2022/pictureBed/master/img/202409032129702.png)
