@@ -7,6 +7,7 @@ export default [
       { text: "框架组件", link: "/site/framework" },
       { text: "人工智能", link: "/lesson/ai" },
       { text: "大数据技术", link: "/lesson/bigData" },
+      { text: "总结宝典", link: "/note/summary" },
     ],
   },
   {
