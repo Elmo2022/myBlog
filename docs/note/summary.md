@@ -150,6 +150,9 @@ queueMicrotask：一个用于将函数排入微任务队列的 API。
 渲染更新：浏览器进行必要的渲染更新。
 检查是否有新的宏任务：如果有新的宏任务，继续执行步骤 1。
 这个循环会一直进行，直到宏任务队列和微任务队列都为空。
+
+
+宏任务与微任务的最大的区别就是，每一个宏任务执行完之后都会把控制权交给浏览器，浏览器就会根据情况决定是否进行渲染，而微任务执行完之后如果还存在微任务则不会把控制权交给浏览器，而是继续执行微任务，直到所有的微任务执行完毕才把控制权交给浏览器。
 ```
 
 29.BOM属性对象方法
@@ -255,11 +258,59 @@ class基本语法及继承
 
 ES6模块加载与CommonJS加载的原理
 
+```
+ES6模块（ECMAScript 2015）和CommonJS是两种不同的模块系统，它们在设计和加载原理上有一些关键的区别。以下是它们的一些基本原理和区别：
+
+### ES6模块
+
+1. **静态分析**：ES6模块在编译时就会确定模块的依赖关系，这使得静态分析成为可能，优化了加载时间和性能。
+
+2. **动态导入**：ES6模块支持动态导入（`import()`），它返回一个Promise对象，可以在需要时异步加载模块。
+
+3. **树摇（Tree Shaking）**：由于ES6模块的静态特性，未使用的代码可以被“摇掉”，即在最终打包时不会被包含，从而减少最终文件的大小。
+
+4. **模块作用域**：每个ES6模块都有自己的作用域，不会污染全局作用域。
+
+5. **导出和导入**：ES6模块使用`export`和`import`关键字来导出和导入模块。
+
+6. **加载机制**：ES6模块通常由JavaScript运行时环境（如浏览器或Node.js）直接支持，不需要额外的加载器。
+
+### CommonJS模块
+
+1. **动态分析**：CommonJS模块在运行时确定依赖关系，这意味着它们不支持静态分析和树摇。
+
+2. **同步加载**：CommonJS模块是同步加载的，这意味着在模块被加载和执行之前，代码不能继续执行。
+
+3. **全局作用域**：CommonJS模块导出的是全局对象`module.exports`和`require`函数，这可能导致全局作用域污染。
+
+4. **导出和导入**：CommonJS模块使用`module.exports`和`require()`函数来导出和导入模块。
+
+5. **加载机制**：CommonJS模块通常需要一个模块加载器（如Node.js的`require`函数）来加载模块。
+
+### 区别
+
+- **加载时机**：ES6模块支持静态分析和动态导入，而CommonJS模块是运行时动态加载的。
+- **作用域**：ES6模块提供了模块作用域，而CommonJS模块导出到全局作用域。
+- **性能**：ES6模块由于支持静态分析和树摇，通常在性能上更优。
+- **异步加载**：ES6模块支持异步加载，而CommonJS模块是同步加载的。
+- **打包工具**：ES6模块通常与现代JavaScript打包工具（如Webpack、Rollup）一起使用，而CommonJS模块则与Node.js的`require`系统一起使用。
+
+随着时间的推移，ES6模块逐渐成为JavaScript模块化的标准，而CommonJS模块则主要用于Node.js环境。不过，两者在某些场景下仍然共存，例如在Node.js中，你仍然可以使用CommonJS模块，也可以使用ES6模块。
+
+```
+
+
+
 ## 三、HTML/CSS
 
 CSS权重及其引入方式
 
-<a></a>标签全部作用
+a标签全部作用
+
+```
+<a href="javascript:alert('Hello World!')">Click Me</a>  JavaScript 函数调用
+导航、下载、邮箱链接    锚点
+```
 
 用CSS画三角形
 
@@ -273,6 +324,8 @@ CSS权重及其引入方式
 
 margin塌陷及合并问题
 
+[CSS中外边距（margin）塌陷和合并的问题（初学者必看） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/337857229)
+
 浮动模型及清除浮动的方法
 
 CSS定位属性
@@ -280,6 +333,10 @@ CSS定位属性
 display及相关属性
 
 IFC与BFC
+
+弹性布局
+
+[弹性布局详解弹性布局是css的一种布局方式，可以完整响应式的实现页面的布局，这里的响应式指的是可随页面变大变小，弹性容器 - 掘金 (juejin.cn)](https://juejin.cn/post/7339085624836767754)
 
 圣杯布局和双飞翼布局的实现
 
@@ -523,6 +580,8 @@ Node的进程
 
 Promise（A+规范）、then、all方法
 
+[Promise从0到手写promise是个面试热点问题，基本上百分百会被问到，并且是你每天都需要用上的方法，面试中，面试 - 掘金 (juejin.cn)](https://juejin.cn/post/7352770048513343539#heading-0)
+
 Iterator遍历器实现
 
 Thunk函数实现
@@ -537,7 +596,38 @@ class的继承
 
 防抖和节流
 
+```
+1.防抖
+ function debounce(fn, delay){
+            let timer
+            return function(){
+                    let args = arguments
+                    if(timer) clearTimeout(timer);
+                    timer = setTimeout(() => {
+                        fn.call(this,...args)
+                    },delay)
+            }
+        }
+2.节流
+ function throttle(fn, delay){
+
+            let prevTime = Date.now();
+            
+            return function(){
+                    if(Date.now() - prevTime > delay){
+                        // 这里我的arguments没有解构，可以直接用apply，apply接收数组参数
+                        fn.apply(this,arguments)
+                        prevTime = Date.now()
+                    }
+            }
+        }
+
+
+```
+
 Ajax原生实现
+
+[详谈ajax发展历程本篇文章带你详细了解下ajax发展历程，涵盖XMLHttpRequest，Jquery-ajax，f - 掘金 (juejin.cn)](https://juejin.cn/post/7313043317722169363#heading-0)
 
 深拷贝的几种方法与比较
 
@@ -551,7 +641,89 @@ Ajax原生实现
 
 React高阶组件
 
+数组扁平化
+
+```js
+1.array.flat(n)  n为需要降维到的维度
+2.递归实现
+function flatten(arr) {
+    var result = []
+    for(var i = 0; i < arr.length ; i++){
+        if(arr[i] instanceof Array){
+            // flatten(arr[i])递归得到的数组要进行合并
+            // result.push(flatten(arr[i])) push会把整个第二层的数组放进去，没用
+            // a.concat(b) || [].concat(a,b)
+            var nextArr = flatten(arr[i])
+            result = result.concat(nextArr)
+            // concat返回新数组
+        }else{
+            result.push(arr[i])
+        }
+    }
+    return result
+}
+console.log(flatten(arr)); // [ 1, 2, 3, 4, 5 ]
+3.使用reduce
+var arr = [1, [2, [3, [4, 5]]]]
+
+function flatten(arr){
+	return arr.reduce(function(pre, item){
+		return pre.concat(Array.isArray(item) ? flatten(item) : item)
+	}, [])
+}
+
+console.log(flatten(arr)) // [ 1, 2, 3, 4, 5 ]
+
+```
+
 数组去重
+
+```javaScript
+1.json.stringify() json.parse()
+2.递归判断
+let arr = [1, 1, '2', 3, 1, 2,
+    { name: '张三', id: { n: 1 } },
+    { name: '张三', id: { n: 1 } },
+    { name: '张三', id: { n: 2 } }
+]
+
+function uniqueArr (arr) {
+    let res = []
+    for (let item of arr) {
+        let isFind = false
+        for (let resItem of res) {
+            if (equal(item, resItem)) {
+                isFind = true
+                break
+            }
+        }
+        if (!isFind) res.push(item)
+    }
+    return res
+}
+
+function equal(v1, v2) {
+    if ((typeof v1 === 'object' && v1 !== null) && (typeof v2 === 'object' && v2 !== null)) { // 都是引用类型
+        if (Object.keys(v1).length !== Object.keys(v2).length) return false
+        for (let key in v1) {
+            if (v2.hasOwnProperty(key)) { // 只要v1遍历的东西，V2显示具有就再去看value
+                // 有可能value也是引用类型，那就递归下
+                if (!equal(v1[key], v2[key])) {
+                    return false
+                }
+            } else {
+                return false
+            }
+        }
+        return true // 两个对象长得完全一样
+    } else { // 都不是引用类型、一方是引用类型 同样这也是递归的出口
+        return v1 === v2
+    }
+}
+
+console.log(uniqueArr(arr));
+
+```
 
 几种排序算法的实现及其复杂度比较
 
@@ -560,6 +732,127 @@ React高阶组件
 二叉树深度遍历（分析时间复杂度）
 
 跨域的实现
+
+```
+1.jsonp
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">获取数据</button>
+    
+    <script>
+
+        function jsonp (url, cb) {
+            return new Promise((resolve, reject) => {
+                const script = document.createElement('script') // 可以创建h5的任意标签
+                script.src = `${url}?cb=${cb}` // http://localhost:3000?cb='callback' 前端写死一个字符串传给后端 
+                document.body.appendChild(script) // 把script添加到body中去，浏览器会自动发请求了
+
+                window[cb] = (data) => { // 把callback挂到window上去，然后值是一个函数体
+                    resolve(data);
+                }
+            })
+        }
+
+        let btn = document.getElementById('btn')
+        btn.addEventListener('click', () => {
+            jsonp('http://localhost:3000', 'callback')
+            .then(res => {
+                console.log('后端返回的结果：'+res);
+            })
+        })
+    </script>
+</body>
+</html>
+借助script的src属性给后端发一个请求，且携带一个参数callback；
+前端在window上添加了一个callback函数；
+后端接收到这个参数callback后，将要返回给前端的数据data和这个参数callback进行拼接，成callback(data)，并返回给前端；
+因为window上已经有一个callback函数，后端又返回了一个形入callback(data)，浏览器会将字符串执行成callback的调用
+
+2.cors
+const http = require('http')
+
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { // 对响应头
+        'Access-Control-Allow-Origin': '*' // *代表所有后端所有地址，浏览器直接接收就可以
+    })
+
+    let data = {
+        msg: "hello cors"
+    }
+    res.end(JSON.stringify(data)) // 向前端返回数据
+})
+
+server.listen(3000, () => {
+    console.log('listening on port 3000');
+})
+
+3.node代理  开发环境下
+4.nginx
+5.domain  iframe标签
+6.postMessage管道通信。
+```
+
+发布-订阅模式
+
+```javaScript
+class PubSub {
+    constructor() {
+        this.events = {};
+    }
+    on(type, callback) {
+        if (!this.events[type]) {
+            this.events[type] = [callback];
+        }
+        this.events[type].push(callback);
+
+    }
+    emit(type, ...args) {
+        if (this.events[type]) {
+            this.events[type].forEach(callback => callback(...args));
+        }
+        else {
+            return;
+        }
+    }
+    off(type, callback) {
+        if (this.events[type]) {
+            this.events[type] = this.events[type].filter(event => event !== callback);
+        }
+    }
+    once(type, callback) {
+        const onceCallback = (...args) => {
+            callback(...args);
+            this.off(type, onceCallback);
+        }
+        this.on(type, onceCallback);
+    }
+}
+
+const run = (...args) => {
+    console.log(...args, "run")
+}
+const say = (...args) => {
+    console.log(...args, "say")
+}
+const pubsub = new PubSub();
+pubsub.on('run', run)
+pubsub.on('say', say)
+
+pubsub.emit('run', 1, 2)
+pubsub.emit('say', 0)
+console.log(pubsub.events)
+// // pubsub.emit('run', 1, 2)
+
+
+```
+
+
 
 ## 九、数据可视化
 
