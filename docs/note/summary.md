@@ -303,26 +303,34 @@ ES6模块（ECMAScript 2015）和CommonJS是两种不同的模块系统，它们
 
 ## 三、HTML/CSS
 
-CSS权重及其引入方式
+1.CSS权重及其引入方式
 
-a标签全部作用
+```
+内联>id>类>元素>通配选择器*>继承    ！important最高    同级的看最后面的样式为主
+```
+
+2.a标签全部作用
 
 ```
 <a href="javascript:alert('Hello World!')">Click Me</a>  JavaScript 函数调用
 导航、下载、邮箱链接    锚点
 ```
 
-用CSS画三角形
+3.用CSS画三角形
 
-未知宽高元素水平垂直居中
+4.未知宽高元素水平垂直居中
 
-元素种类的划分
+5.元素种类的划分
 
-盒子模型及其理解
+[【HTML/CSS】HTML元素种类的划分_html 要素的阶级-CSDN博客](https://blog.csdn.net/xd963625627/article/details/114282036)
 
-定位方式及其区别
+6.盒子模型及其理解
 
-margin塌陷及合并问题
+[理解CSS盒子模型及其应用-CSDN博客](https://blog.csdn.net/WXLink/article/details/142103971#:~:text=理解CSS盒子模)
+
+7.定位方式及其区别
+
+8.margin塌陷及合并问题
 
 [CSS中外边距（margin）塌陷和合并的问题（初学者必看） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/337857229)
 
@@ -360,7 +368,38 @@ CSS3及相关动画
 
 SEO的概念及实现
 
+[什么是SEO？如何进行SEO优化？ - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/210428775#:~:text=什么是SEO？.)
+
 HTML5的新特性
+
+```
+语义标签 (有利于搜索引擎优化)
+<!--header:网页的头部，作为一个网页内容快的标题-->
+<header></header>
+<!--nav:导航栏部分，定于整个页面的主要导航部分-->
+<nav></nav>
+<!--section：网页的一个内容区块-->
+<section></section>
+<!--aside：侧边栏，可以是相关链接或者资料-->
+<aside></aside>
+<!--artical：区块内的一个独立区域，定义自成一体独立的内容-->
+<artical></artical>
+<!--footer:网页的尾部，可以是作者，版权信息，附录等等-->
+<footer></footer>
+
+
+增强型表单   邮箱验证
+
+视频和音频   video  audio
+Canvas绘画
+SVG画图 不容易失帧，更加稳定
+地理定位
+拖放API    一个元素的draggable = "true"
+WebWorker  创建多个线程
+WebStorage  5MB（localStorage,sessionStorage）
+WebSocket  全双工通信
+
+```
 
 Less和Sass使用
 
@@ -375,6 +414,10 @@ HTTP方法
 GET和POST的区别
 
 HTTP建立持久连接的意义
+
+```
+使客户端到服 务器端的连接持续有效，当出现对服务器的后继请求时，Keep-Alive功能避免了建立或者重新建立连接。
+```
 
 HTTP报文的结构
 
@@ -396,6 +439,8 @@ Cookie与Session
 
 常见的Web攻击分类
 
+[十种常见的web攻击 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/140932186#:~:text=本篇主要简单介绍)
+
 TCP与UDP区别
 
 存储机制localStorage、sessionStorage与Cookie存储技术
@@ -403,6 +448,26 @@ TCP与UDP区别
 XSS攻击及防御
 
 CSRF攻击及防御
+
+HTTP1.0 1.1 2 3的区别
+
+```
+说下 HTTP1.0
+无状态协议：HTTP 1.0 是无状态的，每个请求之间相互独立，服务器不保存任何请求的状态信息。
+非持久连接：默认情况下，每个 HTTP 请求/响应对之后，连接会被关闭，属于短连接。这意味着对于同一个网站的每个资源请求，如 HTML 页面上的图片和脚本，都需要建立一个新的 TCP 连接。可以设置Connection: keep-alive 强制开启长连接。
+说下 HTTP1.1
+持久连接：HTTP 1.1 引入了持久连接（也称为 HTTP keep-alive），默认情况下不会立即关闭连接，可以在一个连接上发送多个请求和响应。极大减轻了 TCP 连接的开销。
+流水线处理：HTTP 1.1 支持客户端在前一个请求的响应到达之前发送下一个请求，以提高传输效率。
+说下 HTTP2.0
+二进制协议：HTTP 2.0 使用二进制而不是文本格式来传输数据，解析更加高效。
+多路复用：一个 TCP 连接上可以同时进行多个 HTTP 请求/响应，解决了 HTTP 1.x 的队头阻塞问题。
+头部压缩：HTTP 协议不带状态，所以每次请求都必须附上所有信息。HTTP 2.0 引入了头部压缩机制，可以使用 gzip 或 compress 压缩后再发送，减少了冗余头部信息的带宽消耗。
+服务端推送：服务器可以主动向客户端推送资源，而不需要客户端明确请求。
+16.HTTP/3 了解吗？
+HTTP/2.0 基于 TCP 协议，而 HTTP/3.0 则基于 QUIC 协议，Quick UDP Connections，直译为快速 UDP 网络连接。
+```
+
+
 
 ## 五、前端工程化
 
@@ -490,6 +555,8 @@ Vite：Vite 默认支持 Tree-shaking，无需额外配置。
 
 4.为什么data属性是一个函数而不是一个对象?
 
+[面试官：为什么data属性是一个函数而不是一个对象？_data的属性是一个函数而不是一个对象的区别。-CSDN博客](https://blog.csdn.net/qq_41555854/article/details/112757996#:~:text=上面讲到组件da)
+
 5.动态给vue的data添加一个新的属性时会发生什么? 怎样解决?
 
 6.v-if和v-for的优先级是什么?
@@ -520,11 +587,15 @@ Vite：Vite 默认支持 Tree-shaking，无需额外配置。
 
 14.Vue中组件和插件有什么区别?
 
+[Vue中组件和插件有什么区别（看完秒懂）_vue插件和组件的区别-CSDN博客](https://blog.csdn.net/weixin_69422396/article/details/135476589#:~:text=[vue] 组件)
+
 15.Vue项目中你是如何解决跨域的呢?
 
 16有写过自定义指令吗?自定义指令的应用场景有哪些?
 
 17.Vue中的过滤器了解吗? 过滤器的应用场景有哪些?
+
+[Vue 中的过滤器了解吗？过滤器的应用场景有哪些？_vue中的过滤器了解吗?过滤器的应用场景有哪些?-CSDN博客](https://blog.csdn.net/Aurora9968/article/details/131115272)
 
 18说说你对slot的理解? slot使用场景有哪些?
 
@@ -913,5 +984,4 @@ Linux相关指令
 
 
 
-2. 及时总结。看完一本书的一个章节时，尝试去用自己的理解概括总结，最好记录一下，便于复习。参加完每一次面试后，马上回忆问到的题目，总结记录，想想哪里回答得不好（我基本每一次面试完面经都会发到牛客网上）
-
+ 

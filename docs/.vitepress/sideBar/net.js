@@ -1,16 +1,13 @@
 // 技术笔记导航
 export const net = [
   {
-    text: "从零开始用学计算机网络",
+    text: "秋招问题汇总",
     items: [
       {
-        text: "应用层",
+        text: "笔记",
         link: "/baseLesson/net/applicationLayer",
       },
-      {
-        text: "数据链路层",
-        link: "/baseLesson/net/dataLinkLayer",
-      }
+
 
     ],
   },

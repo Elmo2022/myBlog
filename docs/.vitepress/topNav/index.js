@@ -21,11 +21,10 @@ export default [
     ],
   },
   {
-    text: "秋招八股",
+    text: "秋招问题",
     items: [
-      { text: "计算机网络", link: "/baseLesson/net/applicationLayer" },
-      { text: "操作系统", link: "/baseLesson/os/process" },
-      { text: "数据结构与算法", link: "/baseLesson/algorithm/binarySearch" },
+      { text: "知识点汇总", link: "/baseLesson/net/applicationLayer" },
+
     ],
   },
   {
